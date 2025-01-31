@@ -1,4 +1,8 @@
+
+const items = [];
+
 const items = []; 
+
 
 class Item {
   constructor(name) {
@@ -16,6 +20,15 @@ class Item {
     items.push(newItem);
     return newItem;
   }
+
+
+  static delete(id) {
+    const index = items.findIndex((i) => i.id === id);
+    if (index !== -1) {
+      items.splice(index, 1);
+    }
+  }
+
 }
 
 module.exports = Item;
