@@ -1,3 +1,4 @@
+
 const items = []; // Simule une base de données en mémoire
 
 class Item {
@@ -17,12 +18,14 @@ class Item {
     return newItem;
   }
 
+
   static delete(id) {
     const index = items.findIndex((i) => i.id === id);
     if (index !== -1) {
       items.splice(index, 1);
     }
   }
+
 }
 
 module.exports = Item;

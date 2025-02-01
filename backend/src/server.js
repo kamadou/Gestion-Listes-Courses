@@ -10,6 +10,13 @@ app.use(express.json());
 app.use("/api", itemRoutes);
 
 // Démarrer le serveur
+
+app.use(express.json());
+
+
+app.use("/api", itemRoutes);
+
+
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
