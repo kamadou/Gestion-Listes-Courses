@@ -6,5 +6,7 @@ const itemController = require("../controllers/itemController");
 router.delete("/items/:id", itemController.deleteItem);
 
 router.post("/items", itemController.addItem);
+// Route pour marquer un article comme acheté
+router.put("/items/:id/purchased", itemController.markAsPurchased);
 
 module.exports = router;

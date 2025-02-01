@@ -18,6 +18,7 @@ class Item {
     return newItem;
   }
 
+<<<<<<< HEAD
 
   static delete(id) {
     const index = items.findIndex((i) => i.id === id);
@@ -26,6 +27,15 @@ class Item {
     }
   }
 
+=======
+  static markAsPurchased(id) {
+    const item = items.find((i) => i.id === id);
+    if (item) {
+      item.purchased = true;
+    }
+    return item;
+  }
+>>>>>>> feature/mark-purchased
 }
 
 module.exports = Item;
